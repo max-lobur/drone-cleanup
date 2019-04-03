@@ -45,7 +45,7 @@ spec:
   concurrencyPolicy: Deny
   failedJobsHistoryLimit: 1
   successfulJobsHistoryLimit: 3
-  schedule: 0 */10 * * *
+  schedule: 30 * * * *
   jobTemplate:
     spec:
       template:
