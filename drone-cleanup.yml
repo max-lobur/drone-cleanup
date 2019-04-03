@@ -38,14 +38,13 @@ subjects:
 apiVersion: batch/v1beta1
 kind: CronJob
 metadata:
-  annotations:
-    name: drone-cleanup
-    namespace: drone
+  name: drone-cleanup
+  namespace: drone
 spec:
-  concurrencyPolicy: Deny
+  concurrencyPolicy: Forbid
   failedJobsHistoryLimit: 1
   successfulJobsHistoryLimit: 3
-  schedule: 30 * * * *
+  schedule: "30 * * * *"
   jobTemplate:
     spec:
       template:
